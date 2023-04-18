@@ -1,4 +1,4 @@
-#after merging outputs from enhancerComp1 eg:
+#after merging outputs from enhancerClust1 eg:
 #awk '{ a[FNR] = (a[FNR] ? a[FNR] FS : "") $2 } END { for(i=1;i<=FNR;i++) print a[i] }' $(ls -1v E7.5_End_*) | tr " " "\t" | paste <(cut -f 1 E7.5_End_1_enhancer_meth_for_clustering.txt) -  > all_E7.5_End_enhancers.txt
 #cat <( head -n1 Ect/all_E7.5_Ect_enhancers.txt ) <(tail -n +2 Ect/all_E7.5_Ect_enhancers.txt) <(tail -n +2 End/all_E7.5_End_enhancers.txt) <(tail -n +2 Mes/all_E7.5_Mes_enhancers.txt) > all_E7.5_lineage_specific_enhancers.txt
 
